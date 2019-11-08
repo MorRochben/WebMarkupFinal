@@ -1,0 +1,5 @@
+student name: Sjoerd Klooster
+student number: 654848
+student class IT1B
+URL student GetHub repository: https://github.com/MorRochben/WebMarkupFinal
+Chosen URL: taekwondo-hoofddorp.nl
