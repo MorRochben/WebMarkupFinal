@@ -1,0 +1,263 @@
+* {
+    font-family: Arial, Helvetica, sans-serif, Verdana;
+}
+
+body {
+    margin: 0;
+}
+
+header, footer, article, nav, aside {
+    padding: 1em;
+}
+
+body > header{
+    height: 12vh;
+}
+
+header h2{
+    color: #444444;
+}
+
+a{
+    color: #2699fb;
+}
+
+a.darkLink{
+    color: #000000;
+}
+
+#myVideo {
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+main {
+    display: flex;
+    min-height: 70vh;
+}
+
+p{
+    line-height: 2em;
+}
+
+img{
+    max-width: 300px;
+    max-height: 300px;
+}
+
+header{
+    display: flex;
+}
+
+header > section{
+    flex: 1;
+}
+
+header > nav{
+    flex: 4;
+    color: #FFFFFF;
+}
+
+nav a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul{
+    display: flex;
+    list-style-type:none;
+}
+
+nav ul > li{
+    flex: 1;
+}
+
+main>section {
+    flex: 1;
+}
+
+main>aside {
+    flex: 0 0 20vw;
+    opacity: 0;
+}
+
+main>section{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+main > section > article {
+    border: 1px solid #000000;
+    margin: 20px 0;
+    background-color: #AAAAAA
+}
+
+article > section{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+article p{
+    flex: 2;
+}
+
+article img{
+    flex: 1;
+}
+
+article .wideImage{
+    flex: 2;
+    min-width: 30VW;
+}
+
+article aside{
+    flex: 1;
+}
+
+#sportscontent > section{
+    padding: 8px;
+    background-color: #707070;
+    display: grid;
+    grid-template-columns: auto 300px;
+}
+
+#sportscontent > section:nth-child(odd){
+    background-color: #AAAAAA;
+    grid-template-columns: 300px auto;
+    padding-left: 0;
+}
+
+#sportscontent > section > a{
+    grid-column-start: 2;
+    grid-row: 1 / span 3;
+    justify-self: center;
+}
+
+#sportscontent > section:nth-child(odd) > a{
+    grid-column-start: 1;
+}
+
+#sportscontent > section:nth-child(odd) > h4, #sportscontent > section:nth-child(odd) > p{
+    margin-left: 8px;
+}
+
+#referalcontent section{
+    display: flex;
+}
+
+#referalcontent > section > p{
+    flex:3;
+    margin: 10px;
+}
+
+#referalcontent > section > aside{
+    flex: 1;
+}
+
+section > p:first-child{
+    margin-right: 10px;
+}
+
+section > p:nth-child(2){
+    margin-left: 10px;
+}
+
+form, form section > *{
+    margin: 5px;
+}
+
+form section{
+    display: grid;
+    grid-template-columns: 22.5% 25% 30% auto;
+    grid-auto-rows: 2.5em;
+}
+
+form section label, section button{
+    grid-column: 2 / span 1;
+}
+
+form section input{
+    grid-column: 3 / span 1;
+    border-radius: 0.3em;
+    border: 1px solid #444444;
+}
+form section textarea{
+    border-radius: 0.3em;
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 3;
+    border: 1px solid #444444;
+    resize: none;
+}
+
+form section button{
+    grid-column: 2 / span 1;
+    grid-row: 5 / span 1;
+}
+
+#contactcontent{
+    margin-bottom: 2vh;
+}
+
+header, footer{
+    background: #2699fb;
+}
+
+body > footer {
+    text-align: center;
+    position: sticky;
+    bottom: 0px;
+    height: 3vh;
+    width: 97.45vw;
+}
+
+
+/*cookie css*/
+.cookie-bar {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #FF0000;
+    color: #000000;
+    animation: slideIn 0.5s;
+}
+.cookie-bar .message {
+    white-space: nowrap;
+}
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+   }
+    100% {
+        transform: translateY(0);
+   }
+}
+.close-cb {
+    border: none;
+    color: #000000;
+    background: #FF0000;
+    position: absolute;
+    display: inline-block;
+    right: 10px;
+    top: 0;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.checkbox-cb {
+    display: none;
+}
+.checkbox-cb:checked + .cookie-bar {
+    transform: translateY(-50px);
+}
